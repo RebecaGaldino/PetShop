@@ -1,4 +1,4 @@
-package petshopfiles;
+package PetShop.petshopfiles;
 
 public class Main {
 

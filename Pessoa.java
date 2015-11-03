@@ -1,4 +1,4 @@
-package PetShop.petshopfiles;
+package PetShop;
 
 public class Pessoa {
 	private String nome;

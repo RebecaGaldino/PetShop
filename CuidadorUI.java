@@ -1,4 +1,4 @@
-package PetShop.petshopfiles;
+package PetShop;
 
 import java.util.*;
 
