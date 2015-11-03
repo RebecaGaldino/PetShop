@@ -2,7 +2,6 @@ package PetShop;
 
 import java.util.*;
 
-import PetShop.petshopfiles.Animal;
 
 
 public class CuidadorUI {

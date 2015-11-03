@@ -2,8 +2,7 @@ package PetShop;
 
 import java.util.*;
 
-import PetShop.petshopfiles.Animal;
-import PetShop.petshopfiles.Cliente;
+
 
 public class PetShop {
 	

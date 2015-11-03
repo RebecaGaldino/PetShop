@@ -1,6 +1,5 @@
 package PetShop;
 
-import petshopfiles.Pessoa;
 
 public class Cliente extends Pessoa {
 	private double conta;
