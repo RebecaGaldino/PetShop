@@ -55,8 +55,8 @@ public class Pessoa {
 	/*--------------------------Método toString---------------------------------------------------*/
 
 	public String toString(){
-		return "Nome: " + getNome() +
-				"CPF: " + getCpf() +
+		return "Nome: " + getNome() + "\n" +
+				"CPF: " + getCpf() + "\n" +
 				"ID: " + getId() + "\n";
 	}
    

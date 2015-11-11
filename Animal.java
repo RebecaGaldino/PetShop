@@ -77,11 +77,11 @@ public class Animal {
 	}
 
 	public String toString(){
-		return "Codigo do animal: " + getCod() +
-				"Cod. cliente responsavel: " + getCodClienteResponsavel() + 
-				" Cuidador: " + getIdCuidador() +
-				"Raca: " + getRaca() + 
-				"Idade: " + getIdade() +
-			"Peso: " + getPeso();
+		return "Codigo do animal: " + getCod() + "\n" +
+				"Cod. cliente responsavel: " + getCodClienteResponsavel() + "\n" + 
+				"Cuidador: " + getIdCuidador() + "\n" +
+				"Raca: " + getRaca() + "\n" +
+				"Idade: " + getIdade() + "\n" +
+			    "Peso: " + getPeso() + "\n --------------------- \n";
 	}
 }

@@ -28,7 +28,7 @@ public class Cliente extends Pessoa {
 	
 	@Override
 	public String toString(){
-		return (super.toString()+" CONTA : \n"+getConta());
+		return (super.toString()+"CONTA : \n"+ getConta() + "------------- \n");
 	}
 	
 	

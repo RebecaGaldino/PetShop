@@ -73,7 +73,8 @@ public class CuidadorUI {
 		 		Scanner sc = new Scanner(System.in);
 				System.out.println("O que deseja fazer?");
 				System.out.println("1 - Cadastrar cuidador \n "
-								+ " 2 - Remover cuidador \n");
+								+ "2 - Remover cuidador \n"
+								+ "3 - Exibir cuidadores \n");
 				String op = sc.nextLine();
 				
 				switch(op){
@@ -98,6 +99,10 @@ public class CuidadorUI {
 						petshop.removerCuidador(sc.nextLine());
 						//add mensagem
 						return true;
+						
+					case "3":
+						petshop.exibirCuidadores();
+						return true;
 				}					
 		} catch (Exception e){
 			System.err.println(e.getMessage());
@@ -115,7 +120,7 @@ public class CuidadorUI {
 	 		Scanner sc = new Scanner(System.in);
 			System.out.println("O que deseja fazer?");
 			System.out.println("1 - Cadastrar animal \n "
-							+ " 2 - Remover animal \n");
+							+ "2 - Remover animal \n");
 			String op = sc.nextLine();
 			
 			switch(op){
@@ -162,7 +167,7 @@ public class CuidadorUI {
 	 		Scanner sc = new Scanner(System.in);
 			System.out.println("O que deseja fazer?");
 			System.out.println("1 - Adicionar produto \n "
-							+ " 2 - Remover produto \n");
+							+ "2 - Remover produto \n");
 			String op = sc.nextLine();
 			
 			switch(op){
