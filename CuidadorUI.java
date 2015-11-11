@@ -90,13 +90,13 @@ public class CuidadorUI {
 						double sal = sc.nextDouble();
 						Cuidador c = new Cuidador(nome,cpf,identificacao,sal);
 						petshop.addCuidador(c);
-						//add mensagem
+						System.out.println("Cuidador cadastrado com sucesso!");
 						return true;
 						
 					case "2":
 						
 						System.out.println("Insira a id do cuidador: ");
-						petshop.removerCuidador(sc.nextLine());
+						petshop.removerCuidador(sc.nextLine()); //NOT WORKING
 						//add mensagem
 						return true;
 						
@@ -120,7 +120,8 @@ public class CuidadorUI {
 	 		Scanner sc = new Scanner(System.in);
 			System.out.println("O que deseja fazer?");
 			System.out.println("1 - Cadastrar animal \n "
-							+ "2 - Remover animal \n");
+							+ "2 - Remover animal \n" 
+							+ "3 - Exibir animais \n");
 			String op = sc.nextLine();
 			
 			switch(op){
@@ -149,6 +150,9 @@ public class CuidadorUI {
 					petshop.removerAnimal(sc.nextLine());
 					//add mensagem 
 					return true;
+				case "3":
+					petshop.exibirAnimais();
+					return true;
 			}
 					
 		} catch (Exception e){
@@ -167,7 +171,8 @@ public class CuidadorUI {
 	 		Scanner sc = new Scanner(System.in);
 			System.out.println("O que deseja fazer?");
 			System.out.println("1 - Adicionar produto \n "
-							+ "2 - Remover produto \n");
+							+ "2 - Remover produto \n"
+							+ "3 - Exibir produtos \n");
 			String op = sc.nextLine();
 			
 			switch(op){
@@ -193,6 +198,8 @@ public class CuidadorUI {
 					petshop.removerProduto(sc.nextLine());
 					//add mensagem 
 					return true;
+				case "3":
+					petshop.exibirProdutos();
 			}
 					
 		} catch (Exception e){

@@ -23,6 +23,6 @@ public class Cuidador extends Pessoa {
 	
 	@Override
 	public String toString(){
-		return (super.toString()+"SALARIO : \n"+ getSalario()+ "------------- \n");
+		return (super.toString()+"SALARIO : \n"+ getSalario()+ "\n ------------- \n");
 	}
 }
