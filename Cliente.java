@@ -3,6 +3,7 @@ package PetShop;
 
 public class Cliente extends Pessoa {
 	private double conta;
+	
 	/**@see
 	 * Construtor sem parâmetros,que põe valores default
 	 * */

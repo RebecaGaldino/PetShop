@@ -27,6 +27,7 @@ public class PetShopUI {
 				}
 				else{
 					System.out.println("Você ainda não foi cadastrado,cadastre-se primeiro");
+					escolha(petshop);
 				}
 				break;
 			case "2" :

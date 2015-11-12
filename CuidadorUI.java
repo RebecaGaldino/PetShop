@@ -17,7 +17,8 @@ public class CuidadorUI {
 			System.out.println(" 1 - Opcoes para gerencia de cuidadores \n"
 							+ "  2 - Opcoes para gerencia de animais \n"
 							+ "  3 - Opcoes para gerencia de produtos \n"
-							+ "  4 - Voltar ao Menu ");
+							+ "  4 - Opcoes para gerencia de clientes \n"
+							+ "  5 - Voltar ao Menu ");
 			
 			}while(CuidadorUI.escolha(petshop));
 		} catch(Exception e){
@@ -47,7 +48,9 @@ public class CuidadorUI {
 				case "3":
 					CuidadorUI.atividadesProduto(petshop);
 					return true;
-					
+				case "4":
+					CuidadorUI.atividadesCliente(petshop);
+					return true;
 				default:
 					PetShopUI.escolha(petshop);
 					return false;
@@ -103,6 +106,10 @@ public class CuidadorUI {
 					case "3":
 						petshop.exibirCuidadores();
 						return true;
+						
+					default: 
+						System.out.println("Insira um caracter valido!");
+						return true;
 				}					
 		} catch (Exception e){
 			System.err.println(e.getMessage());
@@ -141,7 +148,7 @@ public class CuidadorUI {
 					String idCuidador = sc.nextLine();
 					Animal a = new Animal(raca, idade, peso, idCliente, cod, idCuidador);
 					petshop.addAnimal(a);
-					//add mensagem
+					System.out.println("Animal cadastrado com sucesso!");
 					return true;
 					
 				case "2":
@@ -152,6 +159,9 @@ public class CuidadorUI {
 					return true;
 				case "3":
 					petshop.exibirAnimais();
+					return true;
+				default: 
+					System.out.println("Insira um caracter valido!");
 					return true;
 			}
 					
@@ -189,7 +199,7 @@ public class CuidadorUI {
 					int qtd = sc.nextInt();
 					Produto p = new Produto (nome, preco, qtd);
 					petshop.addProduto(p);
-					//add mensagem
+					System.out.println("Produto cadastrado/atualizado com sucesso!");
 					return true;
 					
 				case "2":
@@ -200,6 +210,9 @@ public class CuidadorUI {
 					return true;
 				case "3":
 					petshop.exibirProdutos();
+				default: 
+					System.out.println("Insira um caracter valido!");
+					return true;
 			}
 					
 		} catch (Exception e){
@@ -207,6 +220,53 @@ public class CuidadorUI {
 		}
 		return true;
     }
+	
+	public static boolean atividadesCliente(PetShop petshop) throws Exception {
+		try{
+			
+		
+			 		Scanner sc = new Scanner(System.in);
+					System.out.println("O que deseja fazer?");
+					System.out.println("1 - Cadastrar cliente \n "
+									+ "2 - Remover cliente \n"
+									+ "3 - Exibir clientes \n");
+					String op = sc.nextLine();
+					
+					switch(op){
+						case "1" :
+							System.out.println("Insira o nome do cliente: ");
+							String nome = sc.nextLine();
+							System.out.println("Insira o CPF: ");
+							String cpf = sc.nextLine();
+							System.out.println("Insira a identificação dele: ");
+							String identificacao = sc.nextLine();
+							Cliente c = new Cliente(nome,cpf,identificacao);
+							c.setConta(0);
+							petshop.addCliente(c);
+							System.out.println("Cliente cadastrado com sucesso!");
+							return true;
+							
+						case "2":
+							
+							System.out.println("Insira a id do cliente: ");
+							petshop.removerCliente(sc.nextLine()); //NOT WORKING
+							//add mensagem
+							return true;
+							
+						case "3":
+							petshop.exibirClientes();
+							return true;
+							
+						default: 
+							System.out.println("Insira um caracter valido!");
+							return true;
+					}					
+								
+		} catch (Exception e){
+			System.err.println(e.getMessage());
+		}
+		return true;
+	}
 	
 	
 }

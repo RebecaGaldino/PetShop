@@ -70,8 +70,8 @@ public class ClienteUI {
 	 */
 	public static void EmitirFatura(Cliente c){
 		System.out.println("----------------FATURA-------------------\n");
-		System.out.println("\n \n Total gasto com serviços: ");
-		System.out.println("\n \n" + c.getConta());
+		System.out.println("\n Total gasto com serviços: ");
+		System.out.println("\n" + c.getConta() + "\n");
 	}
 	/**@see 
 	 * Realiza o pagamento da fatura.
@@ -79,7 +79,7 @@ public class ClienteUI {
 	public static void PagarFatura(Cliente c){
 		c.setConta(0);
 		System.out.println("-----------------------------------\n");
-		System.out.println("\n \n  Sua fatura foi paga! Muito Obrigada por usar nossos servicos. ");
+		System.out.println("\n Sua fatura foi paga! Muito Obrigada por usar nossos servicos. \n");
 	}  
 	
 }
