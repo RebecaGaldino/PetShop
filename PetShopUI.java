@@ -9,6 +9,7 @@ public class PetShopUI {
 	}
 	
 	public static void escolha(PetShop petshop){
+		Cliente c;
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("BEM VINDO!");
@@ -17,7 +18,16 @@ public class PetShopUI {
 		String op = sc.nextLine();
 		switch(op){
 			case "1" :
-				//ClienteUI.initialize(petshop); TO DO 
+				System.out.println(" Digite sua ID: \n");
+				String id = sc.nextLine();
+				c = petshop.findCliente(id, petshop);
+				
+				if(c!= null){
+					ClienteUI.inicializar(c, petshop);
+				}
+				else{
+					System.out.println("Você ainda não foi cadastrado,cadastre-se primeiro");
+				}
 				break;
 			case "2" :
 				CuidadorUI.inicializar(petshop);

@@ -48,7 +48,16 @@ public class PetShop {
 	}
 	
 	/*--------------------------------------------------------------*/
-
+	public Cliente findCliente(String id, PetShop p){
+		for (int i = 0; i<clientes.size(); i++) {
+			if (clientes.get(i).getId().equals(id)){
+				return clientes.get(i);
+			}
+		}
+		return null;
+	}
+	
+	/*--------------------------------------------------------------*/
 	public void addCliente(Cliente c) throws Exception{
 		if(findCliente(c.getId())){
 			throw new Exception("Esse cliente já está registrado!");
